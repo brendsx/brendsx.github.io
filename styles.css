@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #e5e5f5;
+}
+
+header {
+    background: #aec8da;
+    color: #ffffff;
+    border-radius: 60px;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+header h2, header h3 {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.componentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.componente {
+    background: #dcdbe6;
+    border-radius: 10px; /* Bordas arredondadas para o componente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 180px; /* Largura fixa para os componentes */
+}
+
+.componente img {
+    width: 100px; /* Tamanho menor para a imagem */
+    height: 100px; /* Altura fixa para a imagem */
+    border-radius: 50%; /* Bordas arredondadas para a imagem */
+    object-fit: cover; /* Corta a imagem para caber no círculo */
+}
+
+.componente h4 {
+    margin: 10px 0 5px;
+    font-size: 1.2em; /* Tamanho da fonte do nome */
+}
+
+.componente p {
+    font-size: 0.9em; /* Tamanho da fonte da descrição */
+    color: #666; /* Cor da descrição */
+}
+
+.componente:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do componente ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
