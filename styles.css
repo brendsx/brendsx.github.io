@@ -1,0 +1,337 @@
+/* Configuração global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('imgs/i\ love\ BMiT.png') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover; /* Ajustar imagem para cobrir toda a tela */
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 1em;
+    background-color: rgba(98, 0, 234, 0.514); /* Transparência */
+    color: #fff;
+    font-family: 'Silkscreen', cursive;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 35px 35px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+header:hover {
+    background-color: #00ea90cc; /* Efeito hover no cabeçalho */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Página Inicial */
+.students-row {
+    max-width: 1200px;
+    margin: 2em auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.student-card {
+    text-align: center;
+    width: 150px;
+    display: flex;
+    flex-direction: column; /* Nome abaixo da imagem */
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.student-card a {
+    text-decoration: none; /* Remover sublinhado do link */
+    color: inherit; /* Manter a cor padrão */
+}
+
+.student-card img {
+    border-radius: 50%; /* Tornar a imagem redonda */
+    width: 150px; /* Ajustar largura da imagem */
+    height: 150px; /* Ajustar altura da imagem */
+    object-fit: cover; /* Garantir que a imagem preencha o círculo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionar sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.student-card:hover img {
+    transform: scale(1.1); /* Aumentar levemente a imagem ao passar o mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+.student-card h3 {
+    margin-top: 0.8em; /* Espaçamento entre a imagem e o nome */
+    text-align: center; /* Centralizar o texto */
+    text-decoration: none; /* Remover sublinhado */
+    transition: color 0.3s; /* Transição de cor suave */
+}
+
+.student-card:hover h3 {
+    color: rgba(98, 0, 234, 0.9); /* Alterar a cor do texto ao passar o mouse */
+}
+
+/* Botão de Informações do Curso */
+.course-button {
+    text-align: center;
+    margin-top: 3em; /* Ajustar espaçamento acima */
+}
+
+.course-button a {
+    display: inline-block;
+    padding: 1em 2em;
+    background: rgb(98, 0, 234);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0,3em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Transição suave para hover */
+}
+
+.course-button a:hover {
+    background: rgba(69, 0, 181, 0.9);
+    transform: scale(1.05); /* Leve aumento no tamanho */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+.course-button a:active {
+    background: rgba(49, 0, 130, 0.9);
+}
+
+/* Página Individual do Aluno */
+.student-profile {
+    max-width: 1000px;
+    margin: 4em auto;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    background: rgba(255, 255, 255, 0.9); /* Fundo com transparência */
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Ajusta para dispositivos menores */
+}
+
+.student-profile img {
+    flex: 0 0 250px; /* Define tamanho fixo da imagem */
+    width: 250px;
+    height: 250px; /* Tornar a imagem quadrada */
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    object-fit: cover; /* Ajustar a imagem ao formato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionar sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação */
+}
+
+.student-profile img:hover {
+    transform: scale(1.05); /* Aumentar levemente a imagem ao passar o mouse */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+.student-info {
+    flex: 1; /* Preencher o espaço restante */
+}
+
+.student-info h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: rgba(98, 0, 234, 0.9);
+    transition: color 0.3s;
+}
+
+.student-info h2:hover {
+    color: rgba(69, 0, 181, 0.9);
+}
+
+.student-info p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+.student-info .links a {
+    display: inline-block;
+    margin: 0.5em 0.5em 0 0;
+    padding: 0.5em 1em;
+    color: #fff;
+    background: rgba(98, 0, 234, 0.9);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.student-info .links a:hover {
+    background: rgba(69, 0, 181, 0.9);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.student-info .links a:active {
+    background: rgba(49, 0, 130, 0.9);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 0,3em;
+    background-color: #00ea90cc; /* Transparência */
+    color: #fff;
+    margin-top: 13em;
+   
+    
+    transition: background 0.3s, box-shadow 0.0s;
+}
+
+footer:hover {
+    background-color: rgba(69, 0, 181, 0.9); /* Alterar cor ao passar o mouse */
+    
+}
+/* Página do Curso */
+.course-info {
+    max-width: 1000px;
+    margin: 4em auto;
+    background: rgba(255, 255, 255, 0.9); /* Fundo com transparência */
+    padding: 2em;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1em;
+    animation: fadeIn 0.8s ease-in-out; /* Animação ao carregar */
+}
+
+.course-info h2 {
+    color: rgba(98, 0, 234, 0.9);
+    margin-bottom: 1em;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.course-info h2:hover {
+    color: rgba(69, 0, 181, 0.9); /* Alterar cor ao passar o mouse */
+}
+
+.course-info p {
+    margin-bottom: 1.5em; /* Espaçamento entre parágrafos */
+}
+
+.course-info ul {
+    list-style: disc;
+    padding-left: 2em; /* Indentação para a lista */
+    margin-bottom: 1.5em;
+}
+
+.course-info ul li {
+    margin-bottom: 0.8em;
+}
+
+.course-info a {
+    color: rgba(98, 0, 234, 0.9);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.course-info a:hover {
+    color: rgba(69, 0, 181, 0.9);
+    text-decoration: underline; /* Sublinhado no hover */
+}
+
+/* Botão de Voltar */
+.back-button {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    background: rgba(98, 0, 234, 0.9); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remover sublinhado */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: bold;
+    font-size: 0,3em;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s; /* Transições suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+}
+
+.back-button a:hover {
+    background: rgba(69, 0, 181, 0.9); /* Alterar cor ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no tamanho */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+}
+
+.back-button a:active {
+    background: rgba(49, 0, 130, 0.9); /* Cor ao clicar */
+}
+
+.student-card {
+    text-align: center;
+    width: 180px; /* Largura do cartão */
+    background: #ffffffe6; /* Fundo branco com transparência */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.student-card:hover {
+    transform: translateY(-5px); /* Elevar o cartão ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Intensificar a sombra no hover */
+}
+
+.student-card img {
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    width: 150px; /* Largura fixa da imagem */
+    height: 150px; /* Altura fixa da imagem */
+    object-fit: cover; /* Garantir que a imagem se ajuste */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave na imagem */
+}
+
+.student-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.student-card a {
+    text-decoration: none; /* Remover sublinhado do link */
+    color: inherit; /* Manter a cor padrão */
+}
+/* Configuração global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('imgs/i\ love\ BMiT.png') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover; /* Ajustar imagem para cobrir toda a tela */
+    color: #333;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Fixar a camada de desfoque */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Herdar a mesma imagem de fundo */
+    filter: blur(3px); /* Aplicar o desfoque */
+    z-index: -1; /* Garantir que o desfoque fique atrás do conteúdo */
+}
